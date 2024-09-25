@@ -46,10 +46,6 @@ app.get("/games", (req, res) => {
   res.render("games", { title: "Games" });
 });
 
-app.get("/content-guidelines", (req, res) => {
-  res.render("content-guidelines", { title: "Content Guidelines" });
-});
-
 
 app.get("/blogs/create", (req, res) => {
   res.render("create", { title: "Create a new blog" });

@@ -9,10 +9,9 @@ nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 65vh;
   padding-top: 2.5vh;
   padding-bottom: 2.5vh;
-  background-color: #2b2b2b;
+  margin-bottom: 20vh;
 }
 
 nav.navbar div.site-title {
@@ -24,10 +23,14 @@ nav.navbar div.site-title a {
   text-decoration: none;
 }
 
-nav.navbar div.site-title a h1 {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: white;
+nav.navbar div.site-title a div.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url(assets/Invincibles_logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 80vh;
 }
 
 nav.navbar ul {
@@ -36,6 +39,7 @@ nav.navbar ul {
   gap: 10px;
   align-items: center;
 }
+
 nav.navbar li {
   list-style-type: none;
   margin-left: 5px;
@@ -43,7 +47,9 @@ nav.navbar li {
 
 nav.navbar li a {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 nav.navbar li a:hover {
@@ -64,115 +70,64 @@ div.content h2 {
   color: white;
 }
 
-div.content div.banner {
-  background-color: white;
-  width: 732.11px;
-  height: 405.49px;
-  margin: 0 auto;
-  background-image: url("/assets/Banner.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-div.content hr {
-  border-color: #101010;
-}
-
-div.part-index {
+div.container-banner {
   display: flex;
-  justify-content: space-between;
-  margin-top: 3vh;
-}
-
-div.part-index div.left {
-  margin-right: 10vh;
-}
-
-div.part-two div.left {
-  margin-right: 0;
-}
-
-div.part-index div.left h1,
-p {
-  color: white;
-  font-style: italic;
-}
-
-div.part-index div.left p {
-  font-size: 1.2rem;
-}
-
-div.part-index div.right div.image {
-  width: 300px;
-  height: 169px;
-  background-color: white;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-div.part-one div.right div.image {
-  background-image: url(assets/thumbnail.jpeg);
-}
-
-div.part-two div.right div.image {
-  background-image: url(assets/thumbnail2.jpeg);
-  margin-right: 10vh;
-  width: 300px;
-  height: 169px;
-  background-color: white;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-div.part-three div.right div.image {
-  background-image: url(assets/thumbnail3.jpeg);
-}
-
-div.screenshots {
-  margin-bottom: 5vh;
-}
-
-div.screenshots h1 {
-  color: white;
-}
-
-div.screenshots div.ss-img {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2vh;
+  flex-direction: column;
   justify-content: center;
-}
-
-div.screenshots div.ss-img div.img {
-  width: 100%;
-  height: 0;
-  padding-bottom: 60%;
-  background-color: white;
+  position: relative;
+  align-items: center;
+  background-image: url(assets/Website_Thiago1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 45vh;
+  z-index: 1;
 }
 
-div.screenshots div.ss-img div.one {
-  background-image: url(assets/S01C.jpg);
+div.container-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 52, 81, 0.5); 
+  z-index: -1;
 }
-div.screenshots div.ss-img div.two {
-  background-image: url(assets/S02C.jpg);
+
+div.container-banner span {
+  color: white;
+  font-size: 10vh;
+  font-weight: bold;
 }
-div.screenshots div.ss-img div.three {
-  background-image: url(assets/S03C.jpg);
+
+div.container-banner p {
+  font-size: 20px;
+  margin-left: 40vh;
+  margin-right: 40vh;
+  text-align: center;
+  font-weight: 500;
+  color: white;
 }
-div.screenshots div.ss-img div.four {
-  background-image: url(assets/S04C.jpg);
+
+div.container-banner > a {
+  text-decoration: none;
+  font-size: 1.2vw;
+  color: white;
+  background-color: #5579a6;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-div.screenshots div.ss-img div.five {
-  background-image: url(assets/S05C.jpg);
-}
-div.screenshots div.ss-img div.six {
-  background-image: url(assets/S07C.jpg);
+
+div.container-banner > a:hover {
+  background-color: #7caede;
 }
 
 div.games {
@@ -355,47 +310,56 @@ div.about div.container div.right div.contact div.right a {
   margin-bottom: 50px;
 }
 
-.content-guidelines span {
-  color: black;
-  font-size: 50px;
-  font-weight: bold;
-  font-style: italic;
-}
-
-.content-guidelines p {
-  color: black;
+footer {
+  background-color: rgb(230, 230, 230);
 }
 
 footer div.container {
-  padding-left: 7vh;
-  padding-right: 10vh;
-  background-color: black;
-  padding-bottom: 25vh;
-}
-
-footer div.left {
-  float: left;
   display: flex;
-  flex-direction: column;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  justify-content: left;
+  gap: 5vh;
+  margin-right: 70vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
-footer div.left a {
-  color: #e13c33;
-  font-size: 16px;
-  margin-bottom: 3px;
+
+footer div.container div.left div.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url(assets/Invincibles_logo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-footer div.left h3 {
-  color: white;
+footer div.container div.left p {
+  color: black;
 }
 
-footer div.right {
-  float: right;
-  background-color: black;
+footer div.container div.left div.socials a {
+  text-decoration: none;
+  color: rgb(90, 125, 182);
+  font-size: 2.5vh;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  background-color: white;
 }
 
-footer div.right h1 {
-  color: white;
+footer div.container div.center ul a {
+  padding-right: 10vh;
+  text-decoration: none;
+  color: rgb(90, 125, 182);
+}
+
+footer div.container div.right ul a {
+  padding-right: 15vh;
+  text-decoration: none;
+  color: rgb(90, 125, 182);
 }
 
 .create-blog {
